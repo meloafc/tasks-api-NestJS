@@ -2,8 +2,11 @@ import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nes
 import { TaskService } from './task.service';
 import { TaskDto } from './task.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @UseGuards(AuthGuard)
+@ApiBearerAuth()
+@ApiTags('Tasks')
 @Controller('tasks')
 export class TaskController {
 
