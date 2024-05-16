@@ -34,3 +34,19 @@ export class TaskDto {
     @ApiProperty()
     expirationDate: Date;
 }
+
+export class FindAllParameters {
+    // @IsOptional()
+    // @ApiProperty()
+    title: string;
+
+    // @IsOptional()
+    // @ApiProperty()
+    status: string;
+}
+
+export class TaskRouteParameters {
+    @IsUUID()
+    @ApiProperty()
+    id: string;
+}
